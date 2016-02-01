@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var List = require('./components/List.jsx');
+var EmailField = require('./components/EmailField.jsx');
 
 ReactDOM.render(
-  <List />,
-  document.getElementById('name-list')
+  <EmailField />,
+  document.getElementById('email')
 );
