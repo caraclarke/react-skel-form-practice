@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var EmailField = require('./components/EmailField.jsx');
+var LeadCapture = require('./components/LeadCaputure.jsx');
 
 ReactDOM.render(
-  <EmailField />,
-  document.getElementById('email')
+  <LeadCapture />,
+  document.getElementById('LeadCapture')
 );

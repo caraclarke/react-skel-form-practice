@@ -8,20 +8,23 @@ var LeadCapture = React.createClass({
       // anytime you store a ref (id) it goes into refs automatically
       console.log('form wrong');
     } else {
-      // if had server/ email server this is where you would submit it
+      // send request to email host or server
       var httpRequestBody = {
         email: this.refs.fieldEmail.state.value, // grab email out store it
         firstName: this.refs.fieldName.state.value
       }
       console.log('form fine');
+      this.refs.fieldEmail.clear();
+      this.refs.fieldName.clear();
     }
   },
   render: function() {
     return (
-      <div className="col-sm-3">
+      <div className="col-sm-10">
         <div className="panel panel-default">
           <div className="panel-body">
             <NameField type="First" ref="fieldName" />
+            <br />
             <EmailField ref="fieldEmail" />
             <button className="btn btn-primary" onClick={this.onSubmit}>Submit</button>
           </div>
